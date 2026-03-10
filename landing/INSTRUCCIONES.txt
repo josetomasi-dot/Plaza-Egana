@@ -1,0 +1,200 @@
+=============================================
+ ESPACIO EGAÑA — Landing Page
+ Instrucciones de uso, edición y publicación
+=============================================
+
+ESTRUCTURA DEL PROYECTO
+-----------------------
+landing/
+├── index.html          ← Página principal (estructura y contenido)
+├── styles.css          ← Estilos visuales (colores, tipografía, layout)
+├── script.js           ← Lógica (menú, formulario, validación RUT)
+├── INSTRUCCIONES.txt   ← Este archivo
+└── assets/
+    ├── fonts/          ← Fuentes tipográficas del proyecto
+    └── img/            ← Imágenes usadas en la landing
+        ├── oficina-grande.jpg        → Hero/Proyecto (oficina amplia)
+        ├── oficina-cowork.jpg        → Tipologías (cowork)
+        ├── oficina-individual.jpg    → Disponible para uso
+        ├── oficina-recepcion.jpg     → Disponible para uso
+        ├── estacionamiento.jpg       → Sección estacionamientos
+        ├── edificio-exterior.png     → Fondo del hero
+        ├── metro.jpg                 → Disponible para uso
+        ├── mapa-ubicacion.png        → Disponible para uso
+        ├── ubicacion-mapa.png        → Disponible para uso
+        └── contacto-celular.png      → Disponible para uso
+
+
+=============================================
+1. CÓMO VER LA LANDING EN TU COMPUTADOR
+=============================================
+
+Opción simple:
+- Abre el archivo "index.html" con doble clic. Se abrirá en tu navegador.
+- NOTA: El mapa de Google Maps no se verá en modo local (necesita un servidor).
+
+Opción con servidor local (recomendada):
+- Instala Node.js desde https://nodejs.org
+- Abre una terminal en la carpeta "landing"
+- Ejecuta: npx serve .
+- Abre http://localhost:3000 en tu navegador
+
+
+=============================================
+2. CÓMO EDITAR TEXTOS
+=============================================
+
+Todos los textos están en index.html. Abre el archivo con cualquier
+editor de texto (VS Code, Notepad++, Sublime Text).
+
+Busca el texto que quieras cambiar y modifícalo directamente.
+Los textos principales están organizados por secciones con comentarios
+como "HERO PRINCIPAL", "SECCIÓN PROYECTO", etc.
+
+
+=============================================
+3. CÓMO CAMBIAR IMÁGENES
+=============================================
+
+Las imágenes están en la carpeta assets/img/
+Para reemplazar una imagen:
+1. Renombra tu nueva imagen con el mismo nombre del archivo original
+2. Colócala en la misma carpeta
+3. Listo, el sitio la usará automáticamente
+
+Para la imagen del HERO (fondo principal):
+- Busca en styles.css la línea que dice:
+  background: url('assets/img/edificio-exterior.png')
+- Cambia el nombre del archivo por tu nueva imagen
+
+
+=============================================
+4. CÓMO CAMBIAR COLORES
+=============================================
+
+Los colores están definidos al inicio de styles.css en las variables CSS:
+
+  --color-accent: #00c9a7;        ← Verde/turquesa principal
+  --color-bg: #0a0f1a;            ← Fondo oscuro
+  --color-bg-light: #111827;      ← Fondo secciones alternas
+  --color-text: #e2e8f0;          ← Texto principal
+  --color-text-heading: #ffffff;  ← Títulos
+
+Cambia estos valores y todo el sitio se actualizará.
+
+
+=============================================
+5. CÓMO ACTIVAR EL FORMULARIO (LEADS)
+=============================================
+
+El formulario usa Formspree, un servicio gratuito que envía los datos
+del formulario a tu email. No necesitas programar nada.
+
+PASOS:
+1. Ve a https://formspree.io y crea una cuenta gratuita
+2. Haz clic en "New Form" y dale un nombre (ej: "Espacio Egaña Leads")
+3. Configura el email donde quieres recibir los leads
+4. Formspree te dará un endpoint como: https://formspree.io/f/xabcdefg
+5. Abre index.html y busca esta línea:
+   action="https://formspree.io/f/TU_ENDPOINT_AQUI"
+6. Reemplaza TU_ENDPOINT_AQUI por tu código (ej: xabcdefg)
+7. Listo. Cada envío del formulario llegará a tu email.
+
+Plan gratuito de Formspree: 50 envíos/mes.
+Plan de pago: desde USD $10/mes para más envíos.
+
+ALTERNATIVAS:
+- EmailJS (https://emailjs.com): Similar, envía directo desde el navegador
+- Google Forms: Crea un form en Google y conecta los campos
+- Backend propio: Cambia la URL del action a tu endpoint API
+
+
+=============================================
+6. CÓMO PUBLICAR LA LANDING
+=============================================
+
+OPCIÓN 1 — Netlify (RECOMENDADA, gratis y fácil):
+1. Ve a https://netlify.com y crea una cuenta
+2. Arrastra la carpeta "landing" completa al área de deploy
+3. Netlify te dará una URL tipo: tu-sitio.netlify.app
+4. Opcionalmente conecta tu dominio propio (ej: espacioegana.cl)
+
+OPCIÓN 2 — GitHub Pages (gratis):
+1. Sube la carpeta landing a un repositorio en GitHub
+2. En Settings > Pages, activa GitHub Pages
+3. Tu landing estará en: tu-usuario.github.io/tu-repo
+
+OPCIÓN 3 — Hosting tradicional:
+1. Contrata un hosting (ej: Hostinger, BlueHost, SiteGround)
+2. Sube todos los archivos de la carpeta "landing" por FTP
+3. Asegúrate de que index.html esté en la raíz del hosting
+
+OPCIÓN 4 — Vercel (gratis):
+1. Ve a https://vercel.com
+2. Importa la carpeta y despliega
+
+
+=============================================
+7. DATOS DE CONTACTO A EDITAR
+=============================================
+
+Los datos de contacto están en index.html, sección "contacto":
+- Teléfono: +56 9 6726 6433
+- Dirección: Avda. Irarrázabal 5639, Ñuñoa
+- Email ventas: ventas@espacioegana.cl
+- Email arriendos: arriendos@sri.cl
+- Email oficinas: oficinas@sri.cl
+- WhatsApp: wa.me/56967266433
+
+Busca estos valores en el HTML y cámbialos si es necesario.
+
+
+=============================================
+8. COORDENADAS DE GOOGLE MAPS / WAZE
+=============================================
+
+Las coordenadas del mapa y los botones de navegación usan:
+  Latitud: -33.4536
+  Longitud: -70.5726
+
+Si necesitas ajustar las coordenadas exactas:
+1. Busca la dirección en Google Maps
+2. Haz clic derecho y copia las coordenadas
+3. Busca en index.html las coordenadas actuales y reemplázalas
+
+
+=============================================
+9. PLACEHOLDERS / PENDIENTES
+=============================================
+
+- LOGO: El navbar usa un texto "ESPACIO EGAÑA". Reemplázalo con una
+  imagen del logo real. Busca "navbar__logo-text" en el HTML.
+
+- IMAGEN HERO: Actualmente usa edificio-exterior.png (render del mall).
+  Idealmente reemplazar con un render o foto del edificio Espacio Egaña.
+
+- PLANTA/MASTERPLAN: La sección de tipologías está preparada para
+  incluir una imagen de planta. Agrega un <img> después del comentario
+  "PLACEHOLDER: Si tienes una imagen de planta/masterplan".
+
+- MAPA EMBEBIDO: El iframe de Google Maps usa coordenadas aproximadas.
+  Para un mapa exacto, ve a Google Maps > Compartir > Insertar mapa,
+  copia el código iframe y reemplaza el existente.
+
+
+=============================================
+10. SEO Y PERFORMANCE
+=============================================
+
+Ya incluido:
+- Meta title y description optimizados
+- Open Graph tags para redes sociales
+- Estructura semántica (h1, h2, section, nav, footer)
+- Imágenes con lazy loading
+- Fuentes desde Google Fonts (carga rápida con preconnect)
+- CSS y JS minificables (si quieres optimizar más)
+
+Para mejorar:
+- Agregar favicon (icono de la pestaña del navegador)
+- Comprimir imágenes con https://tinypng.com
+- Agregar Google Analytics o Tag Manager si necesitas métricas
