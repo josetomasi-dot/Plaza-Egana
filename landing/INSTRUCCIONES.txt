@@ -140,10 +140,10 @@ OPCIÓN 4 — Vercel (gratis):
 
 Los datos de contacto están en index.html, sección "contacto":
 - Teléfono: +56 9 6726 6433
-- Dirección: Avda. Irarrázabal 5639, Ñuñoa
+- Dirección: Avda. Irarrázaval 5639, Ñuñoa
 - Email ventas: ventas@espacioegana.cl
 - Email arriendos: arriendos@sri.cl
-- Email oficinas: oficinas@sri.cl
+- Email oficinas: espacioegana@sri.cl
 - WhatsApp: wa.me/56967266433
 
 Busca estos valores en el HTML y cámbialos si es necesario.
